@@ -8,7 +8,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navigation: true,
     navigationPosition: 'right',
     scrollingSpeed: 700,
-    afterRender: () => { AOS.refresh(); },
-    afterLoad: () => { AOS.refresh(); }
+    anchors: ['hero', 'background', 'study', 'hobbies', 'memories', 'future'],
+    afterRender: () => {
+      AOS.refresh();
+    },
+    afterLoad: (origin, destination) => {
+      // AOS を再度リフレッシュ＆アニメート開始
+      AOS.refresh();
+      destination.item.querySelectorAll('[data-aos]').forEach(el => {
+        el.classList.add('aos-animate');
+      });
+    }
   });
 });

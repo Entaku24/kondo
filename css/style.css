@@ -7,15 +7,17 @@
   html, body {
     height: 100%;
     font-family: 'Noto Sans JP', sans-serif;
+    /* fullPage.js が自動で縦横を制御 */
     overflow: hidden;
   }
   
-  /* fullPage セクション */
+  /* fullPage コンテナ */
   #fullpage {
-    position: relative;
     width: 100%;
     height: 100%;
   }
+  
+  /* 各セクションをフルスクリーンに */
   .section {
     height: 100vh;
     display: flex;
@@ -26,7 +28,7 @@
     padding: 40px 20px;
   }
   
-  /* 各セクション背景と文字色 */
+  /* セクション背景 & テキスト色 */
   #section1 { background: linear-gradient(135deg, #4caf50, #81c784); color: #fff; }
   #section2 { background-color: #fafafa; color: #333; }
   #section3 { background-color: #e3f2fd; color: #1565c0; }
