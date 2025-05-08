@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>近藤くんのプロフィール</title>
+  <title>近藤くんプロフィール</title>
 
-  <!-- fullPage.js (セクション遷移) -->
+  <!-- fullPage.js -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
   />
-  <!-- AOS (スクロールアニメーション) -->
+  <!-- AOS -->
   <link
     rel="stylesheet"
     href="https://unpkg.com/aos@2.3.1/dist/aos.css"
@@ -18,66 +18,58 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- ページ全体を #fullpage で囲む -->
   <div id="fullpage">
-    <!-- 1. ヒーローセクション -->
+    <!-- Section 1: ヒーロー -->
     <div class="section hero" id="section1">
-      <img
-        src="images/profile.jpg"
-        alt="近藤のプロフィール写真"
-        class="profile-pic"
-        data-aos="zoom-in"
-      />
-      <h1 data-aos="fade-up" data-aos-delay="200">近藤</h1>
-      <p class="tagline" data-aos="fade-up" data-aos-delay="400">
-        ゲームとチャレンジを愛するフレンドリーなプレイヤー
+      <h1 data-aos="fade-down">こんにちは、近藤です！</h1>
+      <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+        日本大学文理学部4年・建築学科
       </p>
     </div>
 
-    <!-- 2. 自己紹介 -->
-    <div class="section intro" id="section2">
-      <h2 data-aos="fade-right">自己紹介</h2>
+    <!-- Section 2: 出身・バックグラウンド -->
+    <div class="section background" id="section2">
+      <h2 data-aos="fade-right">出身 &amp; バックグラウンド</h2>
       <p data-aos="fade-right" data-aos-delay="200">
-        はじめまして、近藤です。Splatoonをこよなく愛し、
-        深夜のチャレンジにも積極的に取り組むゲーム好きです。
-        チームプレイと仲間とのコミュニケーションを大切にしています。
+        岩手県出身。中学時代は卓球部に所属し、チームワークの大切さと粘り強さを学びました。
       </p>
     </div>
 
-    <!-- 3. 趣味・スキル -->
-    <div class="section skills" id="section3">
-      <h2 data-aos="flip-left">趣味・スキル</h2>
+    <!-- Section 3: 学び -->
+    <div class="section study" id="section3">
+      <h2 data-aos="zoom-in">大学での学び</h2>
+      <p data-aos="zoom-in" data-aos-delay="200">
+        建築学科で空間デザインや構造力学を学び、  
+        「人が心地よく過ごせる建築」を追究しています。
+      </p>
+    </div>
+
+    <!-- Section 4: 趣味・好きなもの -->
+    <div class="section hobbies" id="section4">
+      <h2 data-aos="flip-left">趣味 &amp; 好きなもの</h2>
       <ul>
-        <li data-aos="fade-up" data-aos-delay="100">🎮 Splatoon、オンライン対戦ゲーム</li>
-        <li data-aos="fade-up" data-aos-delay="300">⚡ チャレンジ精神：新モードにもすぐ飛び込む</li>
-        <li data-aos="fade-up" data-aos-delay="500">💬 コミュニケーション：スタンプで感情表現</li>
+        <li data-aos="fade-up" data-aos-delay="100">Splatoon &amp; Minecraft</li>
+        <li data-aos="fade-up" data-aos-delay="300">好きな動物：シロクマ</li>
+        <li data-aos="fade-up" data-aos-delay="500">好きな歌手：King Gnu、米津玄師</li>
       </ul>
     </div>
 
-    <!-- 4. 一言メッセージ -->
-    <div class="section message" id="section4">
-      <h2 data-aos="fade-down">一言メッセージ</h2>
-      <blockquote data-aos="fade-down" data-aos-delay="200">
-        <p>「入ってよかったやつこれ」</p>
-        <p>「ありがとうございました！」</p>
-      </blockquote>
+    <!-- Section 5: 思い出のゲーム -->
+    <div class="section memories" id="section5">
+      <h2 data-aos="fade-down">中学時代の思い出</h2>
+      <p data-aos="fade-down" data-aos-delay="200">
+        当時はFortniteに夢中で、  
+        放課後は仲間と夜遅くまで対戦を楽しんでいました。
+      </p>
     </div>
 
-    <!-- 5. お問い合わせ -->
-    <div class="section contact" id="section5">
-      <h2 data-aos="zoom-in">SNS / Contact</h2>
-      <ul class="social-links">
-        <li data-aos="flip-up" data-aos-delay="100">
-          <a href="#" aria-label="Discord">
-            <img src="images/discord-icon.png" alt="Discord">
-          </a>
-        </li>
-        <li data-aos="flip-up" data-aos-delay="300">
-          <a href="#" aria-label="Twitter">
-            <img src="images/twitter-icon.png" alt="Twitter">
-          </a>
-        </li>
-      </ul>
+    <!-- Section 6: 将来のビジョン -->
+    <div class="section future" id="section6">
+      <h2 data-aos="fade-right">将来のビジョン</h2>
+      <p data-aos="fade-right" data-aos-delay="200">
+        建築の知見を活かしつつ、  
+        プロゲーマー（Splatoon）として世界にも挑戦したいと考えています。
+      </p>
     </div>
   </div>
 

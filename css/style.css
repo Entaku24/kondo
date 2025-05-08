@@ -1,83 +1,60 @@
-/* ベースリセット */
+/* リセット */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-  body, html {
+  html, body {
     height: 100%;
     font-family: 'Noto Sans JP', sans-serif;
-    overflow: hidden; /* fullPage.js 用 */
+    overflow: hidden;
   }
   
-  /* fullPage のセクション共通 */
+  /* fullPage セクション共通 */
   .section {
-    text-align: center;
-    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 40px 20px;
   }
   
-  /* ヒーローセクション */
-  .hero {
-    background: linear-gradient(135deg, #4caf50, #81c784);
-    color: #fff;
-  }
-  .profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    object-fit: cover;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    margin: 20px 0 10px;
-  }
-  .tagline {
-    font-size: 1.2rem;
-  }
-  
-  /* 各セクションの背景色 */
-  .intro { background-color: #fafafa; color: #333; }
-  .skills { background-color: #e8f5e9; color: #2e7d32; }
-  .message { background-color: #fff3e0; color: #ef6c00; }
-  .contact { background-color: #ede7f6; color: #5e35b1; }
+  /* 各セクション背景 */
+  #section1 { background: linear-gradient(135deg, #4caf50, #81c784); color: #fff; }
+  #section2 { background-color: #fafafa; color: #333; }
+  #section3 { background-color: #e3f2fd; color: #1565c0; }
+  #section4 { background-color: #fffde7; color: #f57f17; }
+  #section5 { background-color: #f3e5f5; color: #6a1b9a; }
+  #section6 { background-color: #e8f5e9; color: #2e7d32; }
   
   /* 見出し */
-  h2 {
-    font-size: 2rem;
+  h1, h2 {
+    font-weight: bold;
     margin-bottom: 20px;
+  }
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.2rem; }
+  
+  /* サブタイトル */
+  .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
   }
   
   /* リスト */
-  .skills ul {
+  ul {
     list-style: none;
   }
-  .skills li {
+  ul li {
     font-size: 1.1rem;
     margin: 10px 0;
   }
   
-  /* メッセージ */
-  blockquote {
-    background: rgba(255,255,255,0.8);
-    padding: 20px;
-    border-left: 6px solid currentColor;
-    max-width: 500px;
-  }
-  
-  /* SNSリンク */
-  .social-links {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    margin-top: 20px;
-  }
-  .social-links img {
-    width: 48px;
-    height: 48px;
+  /* 段落 */
+  p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    line-height: 1.6;
   }
   
