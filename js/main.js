@@ -1,23 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // AOS 初期化
-  AOS.init({ duration: 800, once: true });
+  const container = document.querySelector('.container');
+  const faders = container.querySelectorAll('.fade');
 
-  // fullPage.js 初期化
-  new fullpage('#fullpage', {
-    autoScrolling: true,
-    navigation: true,
-    navigationPosition: 'right',
-    scrollingSpeed: 700,
-    anchors: ['hero', 'background', 'study', 'hobbies', 'memories', 'future'],
-    afterRender: () => {
-      AOS.refresh();
-    },
-    afterLoad: (origin, destination) => {
-      // AOS を再度リフレッシュ＆アニメート開始
-      AOS.refresh();
-      destination.item.querySelectorAll('[data-aos]').forEach(el => {
-        el.classList.add('aos-animate');
-      });
-    }
+  // Intersection Observer で .fade 要素を監視
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {
+    root: container,
+    threshold: 0.5
+  });
+
+  // 遅延設定を CSS 変数に反映してオブザーバ登録
+  faders.forEach(el => {
+    const delay = el.dataset.delay || 0;
+    el.style.setProperty('--delay', `${delay}ms`);
+    observer.observe(el);
   });
 });
