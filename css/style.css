@@ -26,7 +26,7 @@
     padding: 40px 20px;
   }
   
-  /* 各セクション背景 */
+  /* 各セクション背景と文字色 */
   #section1 { background: linear-gradient(135deg, #4caf50, #81c784); color: #fff; }
   #section2 { background-color: #fafafa; color: #333; }
   #section3 { background-color: #e3f2fd; color: #1565c0; }
