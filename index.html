@@ -4,48 +4,87 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>近藤くんのプロフィール</title>
+
+  <!-- fullPage.js (セクション遷移) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
+  />
+  <!-- AOS (スクロールアニメーション) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+  />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="hero">
-    <img src="images/profile.jpg" alt="近藤のプロフィール写真" class="profile-pic">
-    <h1 class="name">近藤</h1>
-    <p class="tagline">ゲームとチャレンジを愛するフレンドリーなプレイヤー</p>
-  </header>
+  <!-- ページ全体を #fullpage で囲む -->
+  <div id="fullpage">
+    <!-- 1. ヒーローセクション -->
+    <div class="section hero" id="section1">
+      <img
+        src="images/profile.jpg"
+        alt="近藤のプロフィール写真"
+        class="profile-pic"
+        data-aos="zoom-in"
+      />
+      <h1 data-aos="fade-up" data-aos-delay="200">近藤</h1>
+      <p class="tagline" data-aos="fade-up" data-aos-delay="400">
+        ゲームとチャレンジを愛するフレンドリーなプレイヤー
+      </p>
+    </div>
 
-  <section class="intro">
-    <h2>自己紹介</h2>
-    <p>
-      はじめまして、近藤です。Splatoonをこよなく愛し、深夜のチャレンジにも積極的に取り組むゲーム好きです。  
-      チームプレイと仲間とのコミュニケーションを大切にしています。
-    </p>
-  </section>
+    <!-- 2. 自己紹介 -->
+    <div class="section intro" id="section2">
+      <h2 data-aos="fade-right">自己紹介</h2>
+      <p data-aos="fade-right" data-aos-delay="200">
+        はじめまして、近藤です。Splatoonをこよなく愛し、
+        深夜のチャレンジにも積極的に取り組むゲーム好きです。
+        チームプレイと仲間とのコミュニケーションを大切にしています。
+      </p>
+    </div>
 
-  <section class="skills">
-    <h2>趣味・スキル</h2>
-    <ul>
-      <li>🎮 趣味：Splatoon、オンライン対戦ゲーム</li>
-      <li>⚡ チャレンジ精神：新モードにもすぐ飛び込む</li>
-      <li>💬 コミュニケーション：スタンプで感情表現</li>
-    </ul>
-  </section>
+    <!-- 3. 趣味・スキル -->
+    <div class="section skills" id="section3">
+      <h2 data-aos="flip-left">趣味・スキル</h2>
+      <ul>
+        <li data-aos="fade-up" data-aos-delay="100">🎮 Splatoon、オンライン対戦ゲーム</li>
+        <li data-aos="fade-up" data-aos-delay="300">⚡ チャレンジ精神：新モードにもすぐ飛び込む</li>
+        <li data-aos="fade-up" data-aos-delay="500">💬 コミュニケーション：スタンプで感情表現</li>
+      </ul>
+    </div>
 
-  <section class="message">
-    <h2>一言メッセージ</h2>
-    <blockquote>
-      <p>「入ってよかったやつこれ」</p>
-      <p>「ありがとうございました！」</p>
-    </blockquote>
-  </section>
+    <!-- 4. 一言メッセージ -->
+    <div class="section message" id="section4">
+      <h2 data-aos="fade-down">一言メッセージ</h2>
+      <blockquote data-aos="fade-down" data-aos-delay="200">
+        <p>「入ってよかったやつこれ」</p>
+        <p>「ありがとうございました！」</p>
+      </blockquote>
+    </div>
 
-  <footer class="contact">
-    <h2>SNS/Contact</h2>
-    <ul class="social-links">
-      <li><a href="#" aria-label="Discord"><img src="images/discord-icon.png" alt="Discord"></a></li>
-      <li><a href="#" aria-label="Twitter"><img src="images/twitter-icon.png" alt="Twitter"></a></li>
-    </ul>
-  </footer>
+    <!-- 5. お問い合わせ -->
+    <div class="section contact" id="section5">
+      <h2 data-aos="zoom-in">SNS / Contact</h2>
+      <ul class="social-links">
+        <li data-aos="flip-up" data-aos-delay="100">
+          <a href="#" aria-label="Discord">
+            <img src="images/discord-icon.png" alt="Discord">
+          </a>
+        </li>
+        <li data-aos="flip-up" data-aos-delay="300">
+          <a href="#" aria-label="Twitter">
+            <img src="images/twitter-icon.png" alt="Twitter">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+  <!-- fullPage.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
