@@ -6,15 +6,16 @@
   }
   html, body {
     height: 100%;
-    overflow: hidden;
     font-family: 'Noto Sans JP', sans-serif;
+    overflow: hidden;
   }
   
-  /* --- スクロールスナップ --- */
+  /* --- スクロールスナップ設定 --- */
   .container {
     height: 100vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
   }
   .section {
     height: 100vh;
@@ -27,7 +28,7 @@
     padding: 40px 20px;
   }
   
-  /* --- 背景色と文字色 --- */
+  /* --- 背景色 & 文字色 --- */
   #hero        { background: #4caf50;    color: #fff; }
   #background  { background: #fafafa;    color: #333; }
   #study       { background: #e3f2fd;    color: #1565c0; }
@@ -35,23 +36,30 @@
   #memories    { background: #f3e5f5;    color: #6a1b9a; }
   #future      { background: #e8f5e9;    color: #2e7d32; }
   
-  /* --- 見出し・テキストスタイル --- */
-  h1 { font-size: 3rem; margin-bottom: 20px; }
-  h2 { font-size: 2.2rem; margin-bottom: 20px; }
+  /* --- 見出し・テキスト --- */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
   p, li {
-    font-size: 1.1rem;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 90%;
     line-height: 1.6;
     margin-bottom: 10px;
   }
-  ul { list-style: none; }
+  ul {
+    list-style: none;
+  }
   
   /* --- フェードインアニメーション --- */
   .fade {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-    /* カスタムプロパティでディレイ設定 */
     transition-delay: var(--delay, 0ms);
   }
   .fade.visible {
@@ -59,3 +67,10 @@
     transform: translateY(0);
   }
   
+  /* --- モバイル調整 --- */
+  @media screen and (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    p, li { font-size: 0.9rem; }
+    .section { padding: 20px 10px; }
+  }
